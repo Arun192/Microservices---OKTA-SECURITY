@@ -1,0 +1,10 @@
+package org.arun.orderservice.external.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+
+@FeignClient(name = "PAYMENT-SERVICE/payment")
+public interface PaymentService {
+
+	public ResponseEntity<T>
+}

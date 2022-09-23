@@ -1,0 +1,5 @@
+package org.arun.orderservice.external.client;
+
+public class ProductService {
+
+}

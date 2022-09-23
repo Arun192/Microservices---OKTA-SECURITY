@@ -1,0 +1,5 @@
+package org.arun.orderservice.config;
+
+public class FeignConfig {
+
+}

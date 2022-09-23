@@ -1,0 +1,24 @@
+package org.arun.paymentservice.entity;
+
+import java.time.Instant;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "TRANSACTION_DETAILS")
+@Data
+public class TransactionDetails {
+
+	@Id
+	private long id;
+	private long orderId;
+	private String paymentMode;
+	private String referenceNumber;
+	private Instant paymentDate;
+	private String paymentStatus;
+	private long amount;
+}

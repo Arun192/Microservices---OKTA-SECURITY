@@ -1,0 +1,5 @@
+package org.arun.cloudgateway.controller;
+
+public class FallBackController {
+
+}

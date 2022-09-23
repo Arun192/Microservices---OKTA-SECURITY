@@ -1,0 +1,5 @@
+package org.arun.orderservice.model;
+
+public class OrderResponse {
+
+}

@@ -1,0 +1,5 @@
+package org.arun.ProductService.model;
+
+public class ProductRequest {
+
+}

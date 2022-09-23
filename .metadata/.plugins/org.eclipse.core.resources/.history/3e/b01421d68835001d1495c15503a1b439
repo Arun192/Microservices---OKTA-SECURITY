@@ -1,0 +1,5 @@
+package org.arun.ProductService.exception;
+
+public class ProductServiceCustomException {
+
+}

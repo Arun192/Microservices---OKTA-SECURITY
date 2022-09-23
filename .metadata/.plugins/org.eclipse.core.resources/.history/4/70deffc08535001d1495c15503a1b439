@@ -1,0 +1,9 @@
+package org.arun.ProductService.services;
+
+import org.arun.ProductService.model.ProductRequest;
+
+public interface ProductService {
+
+	long addProduct(ProductRequest productRequest);
+
+}

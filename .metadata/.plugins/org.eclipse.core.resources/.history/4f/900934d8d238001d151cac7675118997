@@ -1,0 +1,11 @@
+package org.arun.orderservice.service;
+
+import org.arun.orderservice.model.OrderRequest;
+
+public interface OrderService {
+
+	long placeOder(OrderRequest orderRequest);
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package org.arun.orderservice.entity;
+
+public class ProductResponse {
+
+}
