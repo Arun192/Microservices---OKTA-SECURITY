@@ -1,11 +1,13 @@
 package org.arun.ProductService.controllers;
 
+
 import org.arun.ProductService.model.ProductRequest;
 import org.arun.ProductService.model.ProductResponse;
 import org.arun.ProductService.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,12 +24,14 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 
+	@PreAuthorize("hasAuthority('Admin')")
 	@PostMapping
 	public ResponseEntity<Long> addProduct(@RequestBody ProductRequest productRequest) {
 		long productId = productService.addProduct(productRequest);
 		return new ResponseEntity<>(productId, HttpStatus.CREATED);
 	}
 
+	@PreAuthorize("hasAuthority('Admin') || hasAuthority('Customer') || hasAuthority('SCOPE_internal')")
 	@GetMapping("/{Id}")
 	public ResponseEntity<ProductResponse> getProductById(@PathVariable("Id") long productId) {
 		ProductResponse productResponse = productService.getProductById(productId);

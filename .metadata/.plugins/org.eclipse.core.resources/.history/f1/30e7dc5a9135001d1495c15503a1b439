@@ -1,5 +1,0 @@
-package org.arun.orderservice.repository;
-
-public interface OrderRepository {
-
-}

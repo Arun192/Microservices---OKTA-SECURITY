@@ -1,6 +1,5 @@
 package org.arun.ProductService.services;
-
-import org.arun.ProductService.entity.Product;
+import org.arun.ProductService.entity.Product;
 import org.arun.ProductService.exception.ProductServiceCustomException;
 import org.arun.ProductService.model.ProductRequest;
 import org.arun.ProductService.model.ProductResponse;
@@ -9,7 +8,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ch.qos.logback.core.joran.util.beans.BeanUtil;
 import lombok.extern.log4j.Log4j2;
 
 @Service
@@ -56,7 +54,7 @@ public class ProductServiceImpl implements ProductService {
 		if (product.getQuantity() < quantity) {
 			throw new ProductServiceCustomException("Product does not have Sufficient Quantity ", "INSUFFICIENT_QUANTITY");
 		}
-		product.setQuantity(product.getQuantity() -quantity);
+		product.setQuantity(product.getQuantity() - quantity);
 		productRepository.save(product);
 		log.info("Product Quantity Updated Successfully");
 	}

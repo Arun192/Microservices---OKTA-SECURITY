@@ -1,5 +1,0 @@
-package org.arun.orderservice.model;
-
-public enum PaymentMode {
-
-}

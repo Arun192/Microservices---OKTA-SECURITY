@@ -16,7 +16,7 @@ public interface ProductService {
 	@PutMapping("/reduceQuantity/{Id}")
 	public ResponseEntity<Void> reduceQuantity(@PathVariable("Id") long productId, @RequestParam long quantity);
 	
-	default void fallback( Exception e)
+	default ResponseEntity<Void> fallback( Exception e)
 	{
 		throw new CustomException("Product Service is not available ", "UNAVAILABLE", 500);
 	}

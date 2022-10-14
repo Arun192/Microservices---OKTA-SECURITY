@@ -1,9 +1,0 @@
-package org.arun.paymentservice.service;
-
-import org.arun.paymentservice.model.PaymentRequest;
-
-public interface PaymentService {
-
-	Long doPayment(PaymentRequest paymentRequest);
-
-}

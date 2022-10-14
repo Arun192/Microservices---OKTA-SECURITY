@@ -1,7 +1,0 @@
-package org.arun.orderservice.service;
-
-public interface OrderService {
-	
-	
-
-}

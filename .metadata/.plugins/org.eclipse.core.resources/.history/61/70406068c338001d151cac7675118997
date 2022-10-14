@@ -1,5 +1,0 @@
-package org.arun.paymentservice.model;
-
-public class PaymentRequest {
-
-}

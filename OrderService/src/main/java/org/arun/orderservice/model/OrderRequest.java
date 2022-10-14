@@ -15,5 +15,7 @@ public class OrderRequest {
 	private long totalAmount;
 	private long quantity;
 	private PaymentMode paymentMode;
+	
+	
 
 }

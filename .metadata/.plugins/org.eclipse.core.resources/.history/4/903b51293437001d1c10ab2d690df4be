@@ -1,5 +1,0 @@
-package org.arun.orderservice.external.decoder;
-
-public class CustomErrorDecoder {
-
-}

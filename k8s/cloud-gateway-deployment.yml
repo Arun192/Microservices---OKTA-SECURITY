@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clould-gateway-app
+spec:
+  selector:
+    matchLabels:
+      app: clould-gateway-app
+  template:
+    metadata:
+      labels:
+        app: clould-gateway-app
+    spec:
+      containers:
+      - name: clould-gateway-app
+        image: arunp2/cloudgateway
+        ports:
+        - containerPort: 9090
+        env:
+        - name: EUREKA_SERVER_ADDRESS
+          valueFrom:
+            ConfigMapRef:
+              key: eureka_service_address
+              name: eureka-cm
+        - name: CONFIG_SERVER_URL
+          valueFrom:
+            ConfigMapRef:
+              key: config_url
+              name: config-cm
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-gateway-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: cloud-gateway-app
+  ports:
+  - port: 8000
+    targetPort: 9090
+
+
+

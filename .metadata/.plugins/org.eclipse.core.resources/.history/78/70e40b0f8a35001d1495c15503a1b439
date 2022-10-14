@@ -1,5 +1,0 @@
-package org.arun.ProductService.exception;
-
-public class RestResponseEntityExceptionHandler {
-
-}

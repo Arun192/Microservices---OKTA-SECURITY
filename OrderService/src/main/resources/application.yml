@@ -6,8 +6,24 @@ spring:
  application:
   name: ORDER-SERVICE
  config:
-   import:
-    - configserver:http://localhost:9296
+   import: configserver:${CONFIG_SERVER_URL:http://localhost:9296}
+ security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-34551137.okta.com/oauth2/default
+      client:
+        registration:
+         internal-client:
+           provider: okta
+           authorization-grant-type: client_credentials
+           scope: internal
+           client-id: 0oa6n855x31tRjO7S5d7
+           client-secret: wFntQdlR7Jjdhxv5tkz7FmC87qYJjtCv1K010_-I
+        provider:
+         okta:
+          issuer-uri: https://dev-34551137.okta.com/oauth2/default
+          
 
  datasource:
   url: jdbc:mysql://${DB_HOST:localhost}:3306/order_db
@@ -27,10 +43,31 @@ resilience4j:
         failure-rate-threshold: 50
         minimum-number-of-calls: 5
         automatic-transition-from-open-to-half-open-enabled: true
-        wait-duration-in-open-state: 5
+        wait-duration-in-open-state: 5s
         permitted-number-of-calls-in-half-open-state: 3
         sliding-window-size: 10
         sliding-window-type: COUNT_BASED
+        
+
+
+
+#security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://dev-34551137.okta.com/oauth2/default
+#      client:
+#       registration:
+#         internal-client:
+#          provider: okta
+#          authorization-grant-type: client_credentials
+#          scope: internal
+#          client-id: 0oa6n855x31tRjO7S5d7
+#          client-secret: wFntQdlR7Jjdhxv5tkz7FmC87qYJjtCv1K010_-I
+#       provider:
+#         okta:
+#          issuer-uri: https://dev-34551137.okta.com/oauth2/default
+          
   
 #eureka:
 #  instance:
@@ -39,4 +76,3 @@ resilience4j:
 #    fetch-registry: true
 #    register-with-eureka: true
 #    service-url:
-#      defaltZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
