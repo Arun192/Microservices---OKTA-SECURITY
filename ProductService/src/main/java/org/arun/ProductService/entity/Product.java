@@ -1,4 +1,4 @@
-package org.arun.ProductService.entity;
+package org.arun.productservice.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,9 +1,12 @@
-package org.arun.ProductService.services;
-import org.arun.ProductService.entity.Product;
-import org.arun.ProductService.exception.ProductServiceCustomException;
-import org.arun.ProductService.model.ProductRequest;
-import org.arun.ProductService.model.ProductResponse;
-import org.arun.ProductService.repositories.ProductRepository;
+package org.arun.productservice.services;
+
+
+
+import org.arun.productservice.entity.Product;
+import org.arun.productservice.exception.ProductServiceCustomException;
+import org.arun.productservice.model.ProductRequest;
+import org.arun.productservice.model.ProductResponse;
+import org.arun.productservice.repositories.ProductRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

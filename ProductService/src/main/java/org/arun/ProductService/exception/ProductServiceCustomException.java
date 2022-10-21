@@ -1,4 +1,4 @@
-package org.arun.ProductService.exception;
+package org.arun.productservice.exception;
 
 import lombok.Data;
 

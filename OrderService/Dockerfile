@@ -6,6 +6,5 @@ COPY ${JAR_FILE} orderservice.jar
 
 ENTRYPOINT [ "java", "-jar" ,"/orderservice.jar" ]
 
-RUN echo ${JAR_FILE}
 
 EXPOSE 9296

@@ -1,9 +1,8 @@
-package org.arun.ProductService.controllers;
+package org.arun.productservice.controllers;
 
-
-import org.arun.ProductService.model.ProductRequest;
-import org.arun.ProductService.model.ProductResponse;
-import org.arun.ProductService.services.ProductService;
+import org.arun.productservice.model.ProductRequest;
+import org.arun.productservice.model.ProductResponse;
+import org.arun.productservice.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

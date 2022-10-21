@@ -1,4 +1,4 @@
-package org.arun.ProductService.model;
+package org.arun.productservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

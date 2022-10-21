@@ -1,6 +1,6 @@
-package org.arun.ProductService.exception;
+package org.arun.productservice.exception;
 
-import org.arun.ProductService.model.ErrorResponse;
+import org.arun.productservice.model.ErrorResponse;
 import org.aspectj.weaver.NewConstructorTypeMunger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

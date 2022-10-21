@@ -1,4 +1,4 @@
-package org.arun.productservice.model;
+package org.arun.orderservice.external.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,12 +7,12 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class ProductResponse {
 
-	private String productName;
-	private long productId;
-	private long quantity;
-	private long price;
+    private String productName;
+    private long productId;
+    private long quantity;
+    private long price;
 }

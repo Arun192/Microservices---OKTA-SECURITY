@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
-import com.github.tomakehurst.wiremock.junit5.WireMockExtension;
 
 import org.arun.orderservice.entity.Order;
 import org.arun.orderservice.model.OrderRequest;
@@ -28,6 +27,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import com.github.tomakehurst.wiremock.junit5.WireMockExtension;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -56,7 +56,7 @@ public class OrderControllerTest {
 	private MockMvc mockMvc;
 	
 	@RegisterExtension
-	static WireMockExtension wireMockServer =WireMockExtension.newInstance()
+    static WireMockExtension wireMockServer = WireMockExtension.newInstance()
 			.options(WireMockConfiguration
 					.wireMockConfig()
 					.port(9191))

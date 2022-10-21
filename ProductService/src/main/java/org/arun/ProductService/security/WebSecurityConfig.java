@@ -1,4 +1,4 @@
-package org.arun.ProductService.security;
+package org.arun.productservice.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

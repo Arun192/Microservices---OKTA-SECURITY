@@ -1,6 +1,6 @@
-package org.arun.ProductService.repositories;
+package org.arun.productservice.repositories;
 
-import org.arun.ProductService.entity.Product;
+import org.arun.productservice.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

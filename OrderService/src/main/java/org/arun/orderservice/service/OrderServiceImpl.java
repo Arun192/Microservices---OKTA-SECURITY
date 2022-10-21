@@ -2,13 +2,13 @@
 
 import java.time.Instant;
 
-import org.arun.ProductService.model.ProductResponse;
 import org.arun.orderservice.entity.Order;
 import org.arun.orderservice.exception.CustomException;
 import org.arun.orderservice.external.client.PaymentService;
 import org.arun.orderservice.external.client.ProductService;
 import org.arun.orderservice.external.request.PaymentRequest;
 import org.arun.orderservice.external.response.PaymentResponse;
+import org.arun.orderservice.external.response.ProductResponse;
 import org.arun.orderservice.model.OrderRequest;
 import org.arun.orderservice.model.OrderResponse;
 import org.arun.orderservice.repository.OrderRepository;

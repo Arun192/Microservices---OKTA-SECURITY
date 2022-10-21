@@ -1,7 +1,7 @@
-package org.arun.ProductService.services;
+package org.arun.productservice.services;
 
-import org.arun.ProductService.model.ProductRequest;
-import org.arun.ProductService.model.ProductResponse;
+import org.arun.productservice.model.ProductRequest;
+import org.arun.productservice.model.ProductResponse;
 
 public interface ProductService {
 
