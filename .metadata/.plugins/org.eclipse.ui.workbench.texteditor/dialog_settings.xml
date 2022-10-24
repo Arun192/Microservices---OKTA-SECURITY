@@ -8,6 +8,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="ProductResponse"/>
 			<item value="Get Orders - Failure Scenario"/>
 			<item value="tomcat"/>
 		</list>
